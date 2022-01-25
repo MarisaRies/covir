@@ -8,8 +8,7 @@ CREATE TABLE tb_patients
      deathdate           DATE DEFAULT NULL, 
      first               NVARCHAR(256) DEFAULT NULL, 
      last                NVARCHAR(256) DEFAULT NULL, 
-     dataset_origin      NVARCHAR(256), 
-     PRIMARY KEY (id, dataset_origin) 
+     PRIMARY KEY (id) 
   );
 
 CREATE TABLE tb_conditions 
@@ -19,7 +18,6 @@ CREATE TABLE tb_conditions
      patient_id     NVARCHAR(256), 
      code           NVARCHAR(256), 
      description    NVARCHAR(256) DEFAULT NULL, 
-     dataset_origin NVARCHAR(256), 
-     PRIMARY KEY (start, stop, patient_id, code, dataset_origin), 
-     FOREIGN KEY (patient_id) REFERENCES tb_patients(id, dataset_origin) 
+     PRIMARY KEY (start, stop, patient_id, code), 
+     FOREIGN KEY (patient_id) REFERENCES tb_patients(id) 
   );
