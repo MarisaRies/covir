@@ -31,3 +31,4 @@ WHERE
 (
   imm.ENCOUNTER = enc.Id
 )
+;
