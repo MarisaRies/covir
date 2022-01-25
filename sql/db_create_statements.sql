@@ -21,5 +21,5 @@ CREATE TABLE tb_conditions
      description    NVARCHAR(256) DEFAULT NULL, 
      dataset_origin NVARCHAR(256), 
      PRIMARY KEY (start, stop, patient_id, code, dataset_origin), 
-     FOREIGN KEY (patient_id) REFERENCES tb_patients(id, dataset_origin), 
+     FOREIGN KEY (patient_id) REFERENCES tb_patients(id, dataset_origin) 
   );
