@@ -3,7 +3,7 @@ CREATE VIEW v_encounters_aggr AS
 
 SELECT 
   enc.Id,
-  enc.START as date, 
+  enc.start as date, 
   enc.patient,
   con.code,
   con.description 
@@ -19,7 +19,7 @@ UNION
 
 SELECT 
   enc.Id,
-  enc.START as date, 
+  enc.date as date, 
   enc.patient,
   imm.code,
   imm.description 
