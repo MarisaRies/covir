@@ -12,7 +12,7 @@ FROM
   conditions as con
 WHERE
 (
-  con.ENCOUNTER = enc.Id
+  con.encounter = enc.Id
 )
 
 UNION
@@ -29,6 +29,6 @@ FROM
 	
 WHERE
 (
-  imm.ENCOUNTER = enc.Id
+  imm.encounter = enc.Id
 )
 ;
