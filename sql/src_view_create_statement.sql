@@ -16,7 +16,7 @@ WHERE
 UNION
 SELECT 
   enc.Id,
-  enc.date as date, 
+  enc.start as date, 
   enc.patient,
   imm.code,
   imm.description 
