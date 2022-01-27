@@ -26,7 +26,7 @@ SELECT
   enc.patient,
   enc.code,
   enc.description,
-  imm.code as action_code,,
+  imm.code as action_code,
   imm.description as action_desc,
   'imm' as action_src
 FROM 
