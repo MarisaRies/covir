@@ -1,5 +1,5 @@
-DROP VIEW IF EXISTS v_encounters_aggr;
-CREATE VIEW v_encounters_aggr AS 
+DROP VIEW IF EXISTS v_encounters_star;
+CREATE VIEW v_encounters_star AS 
 SELECT 
   enc.Id,
   enc.start as date, 
