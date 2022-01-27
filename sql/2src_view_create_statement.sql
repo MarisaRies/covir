@@ -5,7 +5,8 @@ SELECT
   enc.start as date, 
   enc.patient,
   con.code,
-  con.description 
+  con.description,
+  'con' as code_src
 FROM 
   tb_encounters as enc,
   tb_conditions as con
@@ -19,7 +20,8 @@ SELECT
   enc.start as date, 
   enc.patient,
   imm.code,
-  imm.description 
+  imm.description,
+  'imm' as code_src
 FROM 
   tb_encounters as enc,
   tb_immunizations as imm
