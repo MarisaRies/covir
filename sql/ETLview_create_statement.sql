@@ -1,6 +1,5 @@
 DROP VIEW IF EXISTS v_encounters_aggr;
 CREATE VIEW v_encounters_aggr AS 
-
 SELECT 
   enc.Id,
   enc.start as date, 
@@ -8,15 +7,13 @@ SELECT
   con.code,
   con.description 
 FROM 
-  encounters as enc,
-  conditions as con
+  tb_encounters as enc,
+  tb_conditions as con
 WHERE
 (
   con.encounter = enc.Id
 )
-
 UNION
-
 SELECT 
   enc.Id,
   enc.date as date, 
@@ -24,11 +21,9 @@ SELECT
   imm.code,
   imm.description 
 FROM 
-  encounters as enc,
-  immunizations as imm
-	
+  tb_encounters as enc,
+  tb_immunizations as imm
 WHERE
 (
   imm.encounter = enc.Id
-)
-;
+);
