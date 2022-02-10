@@ -8,8 +8,6 @@ CREATE TABLE tb_patients
      id                  NVARCHAR(256), 
      birthdate           DATE DEFAULT NULL, 
      deathdate           DATE DEFAULT NULL,
-     first               NVARCHAR(256) DEFAULT NULL, 
-     last                NVARCHAR(256) DEFAULT NULL, 
      PRIMARY KEY (id) 
   );
   
